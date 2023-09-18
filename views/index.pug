@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 Create Your Cars Here
+  form(method="POST" action="/card")
+    label(for="firstName") First:
+    input(type="text" name="firstname" id="firstName")
+
+    label(for="LastName") Last:
+    input(type="text" name="LastName" id="LastName")
+
+    label(for="type") type:
+    select(name="type" id="type")
+    option(value = "Bronze") Bronze
+    option(value = "Standard") Standard
+    option(value = "Premium") Premium
+
+    label(for="dataOfbirth") DOB
+    input(type="date" name="dateOfBirth" id="dataOfBirth")
+
+    label(for="addressLine1") Address Line 1:
+    input(type="text" name="addressLine1" id="addressLine1")
+
+    label(for="addressLine2") Address Line 2:
+    input(type="text" name="addressLine2" id="addressLine2")
+
+    label(for="city") City:
+    input(type="text" name="city" id="city")
+
+    label(for="state") State:
+    select(name="state" id="state")
+    option(value = "CA") CA
+    option(value = "NV") NV
+    option(value = "WA") WA
+
+    label(for="zip") Zip Code:
+    input(type="text" name="zip" id="zip")
+
+    button(type="submit" action="pust") Create My Card
