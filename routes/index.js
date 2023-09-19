@@ -7,3 +7,16 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+console.log(req.body.dateOfBirth)
+res.render(  'card', {
+  firstName: req.body.firstName,
+  lastName: req.body.lastName,
+  type: req.body.type,
+  dateOfBirth: new Date(req.body.dateOfBirth),
+  addressLine1:req.body.addressLine1,
+  addressLine2:req.body.addressLine2,
+  city: req.body.city,
+  state: req.body.zip,
+  accountNumber: 12345,
+  currentDate: new Date()
+})
