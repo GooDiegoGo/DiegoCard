@@ -16,7 +16,14 @@ res.render(  'card', {
   addressLine1:req.body.addressLine1,
   addressLine2:req.body.addressLine2,
   city: req.body.city,
-  state: req.body.zip,
-  accountNumber: 12345,
+  state: req.body.state,
+  zip: req.body.zip,
+  accountNumber: createAccountNumber(),
   currentDate: new Date()
-})
+});
+module.exports = router;
+
+function creatAccountNumber(){
+  let accNum = ""
+
+}
